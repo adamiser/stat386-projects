@@ -89,12 +89,7 @@ We've done it! Using "helloworld" as our message, 'ciphertext' now contains the 
 
 *Decrpytion is simple: reverse the above process!*
 
-I leave this as a challenge to you - how would you reverse the process? I'll start you with a hint. Inverting this process involves calculating the "multiplicative modular inverse". There are many ways to do this, from [Euclid's Algorithm](https://www.extendedeuclideanalgorithm.com/multiplicative_inverse.php) to Inverse Reciprocity. I found it easiest to implement the method found in this video. I've coded it as follows:
-
-
-https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/modular-inverses
-https://www.youtube.com/watch?v=03Gv0YAMWmo&t=131s
-
+I leave this as a challenge to you - how would you reverse the process? I'll start you with a hint. Inverting this process involves calculating the "multiplicative modular inverse". There are many ways to do this, from [Euclid's Algorithm](https://www.extendedeuclideanalgorithm.com/multiplicative_inverse.php) to [more naive methods](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/modular-inverses). I found it easiest to implement the method found in [this video](https://www.youtube.com/watch?v=03Gv0YAMWmo&t=131s). I've coded it as follows:
 
 ```
 modulus <- 26
@@ -114,13 +109,4 @@ The rest is up to you!
 
 Substition ciphers, though relatively easy to break today, are quite fun to create and use. The math behind the scenes is interesting and the code is an enjoyable puzzle. I created this Affine Cipher in R, but it can be easily created in Python using NumPy, or any other language for that matter!
 
-In closing, check out this application I made in R Shiny:
-
-
-
-
-
-
-
-### An application.
-https://adamiser.shinyapps.io/affinecipher/
+In closing, check out [this Affine Cipher application](https://adamiser.shinyapps.io/affinecipher/) I made in R Shiny.
