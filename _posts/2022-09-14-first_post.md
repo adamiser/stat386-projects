@@ -15,6 +15,8 @@ image: /assets/images/cipher.jpeg
 
 Substitution ciphers marked the beginning of cryptography. They were used anciently, most notably by Caesar's Rome (ever heard of the "Caesar Shift"?). These ciphers were largely unsolvable for millenium, until formal techniques such as "frequency analysis" were introduced. Even still, some substitution ciphers were so advanced that these techniques were rendered useless; in fact, attempts to break one notorious cipher, the German "enigma" from WWII, led to the invention of what many call the first computer. Ciphers nowadays involve advanced mathematics in areas such as prime number theory, finite fields, and elliptic curves.
 
+> Substition ciphers led to the invention of what many call the first computer.
+
 Despite the fact that modern cryptography has shifted far beyond substituion ciphers, messages that are shorter than 100 characters, especially when spaces are removed, are relatively unsolvable to someone without a computer when encrypted with a substitution cipher. This can be a lot of fun for friends who want to communicate without being discovered by their peers.
 
 Substition ciphers are quite easy to create in programs like python and R. We will now explore one such cipher, the "Affine Cipher", and how it can be created in R.
@@ -61,8 +63,8 @@ for (i in 1:length(message)) {
 ```
 
 Notice 2 things:
-1. The 'match' function in R will return the index where the character 'message[i]' matches a character in the vector 'LETTERS'. 
-2. We add the '- 1' in our declaration of 'value' because R indexes starting at 1, and remember that our cipher implies that we index starting at 0.
+* 1. The 'match' function in R will return the index where the character 'message[i]' matches a character in the vector 'LETTERS'. *
+* 2. We add the '- 1' in our declaration of 'value' because R indexes starting at 1, and remember that our cipher implies that we index starting at 0. *
 
 We now have a numeric value for our letter. We can then insert that number into our Affine function. This is quite easy. Note that I continue our previous for loop:
 
@@ -85,6 +87,10 @@ ciphertext <- paste(cipher, sep = "", collapse = "")
 ```
 
 We've done it! Using "helloworld" as our message, 'ciphertext' now contains the text 'FYXXEOELXN'.
+
+### The decryption.
+
+
 
 
 
