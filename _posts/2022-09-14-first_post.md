@@ -11,7 +11,7 @@ image: /assets/images/cipher.jpeg
 Substitution ciphers marked the beginning of cryptography. They were used anciently, most notably by Caesar's Rome (ever heard of the "Caesar Shift"?). These ciphers were largely unsolvable for millenium, until formal techniques such as "frequency analysis" were introduced. Even still, some substitution ciphers were so advanced that these techniques were rendered useless; in fact, attempts to break one notorious cipher, the German "enigma" from WWII, led to the invention of what many call the first computer. Ciphers nowadays involve advanced mathematics in areas such as prime number theory, finite fields, and elliptic curves.
 
 
-> Substition ciphers led to the invention of what many call the first computer.
+> ###Substition ciphers led to the invention of what many call the first computer.
 
 
 Despite the fact that modern cryptography has shifted far beyond substituion ciphers, messages that are shorter than 100 characters, especially when spaces are removed, are relatively unsolvable to someone without a computer when encrypted with a substitution cipher. This can be a lot of fun for friends who want to communicate without being discovered by their peers.
