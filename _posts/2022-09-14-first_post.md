@@ -6,22 +6,19 @@ author: Adam Simpson
 description: A deep dive into advanced substitution ciphers and creating them in R
 image: /assets/images/cipher.jpeg
 ---
-
-# Writing code with code: Substitution ciphers in R
-
-## A "deep dive" into advanced substitution ciphers and creating them in R
-
-### The history.
+## The history.
 
 Substitution ciphers marked the beginning of cryptography. They were used anciently, most notably by Caesar's Rome (ever heard of the "Caesar Shift"?). These ciphers were largely unsolvable for millenium, until formal techniques such as "frequency analysis" were introduced. Even still, some substitution ciphers were so advanced that these techniques were rendered useless; in fact, attempts to break one notorious cipher, the German "enigma" from WWII, led to the invention of what many call the first computer. Ciphers nowadays involve advanced mathematics in areas such as prime number theory, finite fields, and elliptic curves.
 
+
 > Substition ciphers led to the invention of what many call the first computer.
+
 
 Despite the fact that modern cryptography has shifted far beyond substituion ciphers, messages that are shorter than 100 characters, especially when spaces are removed, are relatively unsolvable to someone without a computer when encrypted with a substitution cipher. This can be a lot of fun for friends who want to communicate without being discovered by their peers.
 
 Substition ciphers are quite easy to create in programs like python and R. We will now explore one such cipher, the "Affine Cipher", and how it can be created in R.
 
-### The theory.
+## The theory.
 
 The Affine cipher is a one-to-one substituion, meaning every letter of the alphabet maps to one other letter only; for instance, if the 'h' in the message "helloworld" mapped to 'y', it would only map to 'y'. This mapping is accomplished with a function of the form:
 ```
@@ -35,7 +32,7 @@ L(x) = 11x + 6 (mod 26)
 ```
 With this funciton, the message "helloworld" maps to "fyxxeoelxn". Want to make sure? Plug in 'h' = 7 and confirm that 11(7) + 6 (mod 26) = 5. Try each letter yourself!
 
-### The code.
+## The code.
 
 First step is to split your message into a vector of characters. R does this nicely with the 'strsplit' function:
 
@@ -63,8 +60,8 @@ for (i in 1:length(message)) {
 ```
 
 Notice 2 things:
-* 1. The 'match' function in R will return the index where the character 'message[i]' matches a character in the vector 'LETTERS'. *
-* 2. We add the '- 1' in our declaration of 'value' because R indexes starting at 1, and remember that our cipher implies that we index starting at 0. *
+*1. The 'match' function in R will return the index where the character 'message[i]' matches a character in the vector 'LETTERS'.*
+*2. We add the '- 1' in our declaration of 'value' because R indexes starting at 1, and remember that our cipher implies that we index starting at 0.*
 
 We now have a numeric value for our letter. We can then insert that number into our Affine function. This is quite easy. Note that I continue our previous for loop:
 
@@ -88,7 +85,38 @@ ciphertext <- paste(cipher, sep = "", collapse = "")
 
 We've done it! Using "helloworld" as our message, 'ciphertext' now contains the text 'FYXXEOELXN'.
 
-### The decryption.
+## The decryption.
+
+*Decrpytion is simple: reverse the above process!*
+
+I leave this as a challenge to you - how would you reverse the process? I'll start you with a hint. Inverting this process involves calculating the "multiplicative modular inverse". There are many ways to do this, from [Euclid's Algorithm](https://www.extendedeuclideanalgorithm.com/multiplicative_inverse.php) to Inverse Reciprocity. I found it easiest to implement the method found in this video. I've coded it as follows:
+
+
+https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/modular-inverses
+https://www.youtube.com/watch?v=03Gv0YAMWmo&t=131s
+
+
+```
+modulus <- 26
+for (i in 1:modulus) {
+    value <- ((i*modulus)+1)/a
+    if (value%%1 == 0) {
+      inverse <- value
+      break
+    }
+  }
+  return(inverse)
+```
+
+The rest is up to you!
+
+## The conclusion.
+
+Substition ciphers, though relatively easy to break today, are quite fun to create and use. The math behind the scenes is interesting and the code is an enjoyable puzzle. I created this Affine Cipher in R, but it can be easily created in Python using NumPy, or any other language for that matter!
+
+In closing, check out this application I made in R Shiny:
+
+
 
 
 
