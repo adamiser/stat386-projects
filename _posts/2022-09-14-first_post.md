@@ -4,7 +4,7 @@ title:  "MYYPQTU NGHG WGJY: Cryptography in R"
 date:   2022-09-14
 author: Adam Simpson
 description: A deep dive into advanced substitution ciphers and creating them in R
-image: /assets/images/Lock.jpeg
+image: https://raw.githubusercontent.com/adamiser/stat386-projects/main/assets/images/Lock.jpeg
 ---
 I'm quite sure you've seen cipher text similar to the title of this post at some point in your life. Isn't it thrilling?! You know a message lurks somehwere within the jumbled letters. As data scientists, we understand the importance of "safe data". Cryptography, with its beautiful math and essential role in today's data-driven age, ought to demand from us at least some level of respect and interest.
 
