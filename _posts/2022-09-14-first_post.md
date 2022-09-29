@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "CLKPHEULGPFK QW GOYWEIY: Cryptography in R"
+title:  "MYYPQTU NGHG WGJY: Cryptography in R"
 date:   2022-09-14
 author: Adam Simpson
 description: A deep dive into advanced substitution ciphers and creating them in R
@@ -14,11 +14,11 @@ Substitution ciphers marked the beginning of cryptography. They were used ancien
 
 > Substition ciphers led to the invention of what many call the first computer.
 
-Despite the fact that modern cryptography has shifted far beyond substituion ciphers, messages that are shorter than 100 characters, especially when spaces are removed, are relatively unsolvable to someone without a computer when encrypted with certain substitution ciphers. This can be a lot of fun for friends who want to communicate without being discovered by their peers.
+Modern cryptography has moved beyond substitution ciphers into [higher-level public key systems](https://www.infoworld.com/article/3641388/a-quick-guide-to-modern-cryptography.html), RSA being the most famous. However, messages that are shorter than 100 characters, especially when spaces are removed, are relatively unsolvable to someone without a computer when encrypted with certain substitution ciphers. These types of ciphers offer a wonderful introduction into the idea of data encryption.
 
 > These ciphers are virtually unsolvable when shorter than 100 characters!
 
-Substition ciphers are quite easy to create. They employ various principles of number theory that are easily employed by computers. We will now explore one such cipher, the "Affine Cipher", and how it can be created in R.
+Plus, substition ciphers are quite simple to create! They employ various principles of number theory that are easily employed by computers. We will now explore one such cipher, the "Affine Cipher", and how it can be created in R.
 
 
 
@@ -36,7 +36,7 @@ L(x) = 11x + 6 (mod 26)
 ```
 With this funciton, the message "helloworld" maps to "fyxxeoelxn". Want to make sure? Plug in 'h' = 7 and confirm that 11(7) + 6 (mod 26) = 5. Try each letter yourself!
 
-**At this point you should be thinking, "I wonder if the title of this post was encrypted in this way...?"**
+> **At this point you should be thinking, "I wonder if the title of this post was encrypted in this way...?"**
 
 
 
