@@ -6,17 +6,15 @@ author: Adam Simpson
 description: A deep dive into advanced substitution ciphers and creating them in R
 image: /assets/images/cipher.jpeg
 ---
-## The history.
-
-Substitution ciphers marked the beginning of cryptography. They were used anciently, most notably by Caesar's Rome (ever heard of the "Caesar Shift"?). These ciphers were largely unsolvable for millenium, until formal techniques such as "frequency analysis" were introduced. Even still, some substitution ciphers were so advanced that these techniques were rendered useless; in fact, attempts to break one notorious cipher, the German "enigma" from WWII, led to the invention of what many call the first computer. Ciphers nowadays involve advanced mathematics in areas such as prime number theory, finite fields, and elliptic curves.
+Substitution ciphers marked the beginning of cryptography. They were used anciently, most notably by Caesar's Empire (ever heard of the "Caesar Shift"?). These ciphers were largely unsolvable for millenium, until formal techniques such as "frequency analysis" were introduced. Despite this, some substitution ciphers were so advanced that these techniques were rendered useless. Attempts to break one notorious cipher, the German "enigma" from WWII, led to the invention of what many call the first computer.
 
 
-> ###Substition ciphers led to the invention of what many call the first computer.
+>>> Substition ciphers led to the invention of what many call the first computer.
 
 
-Despite the fact that modern cryptography has shifted far beyond substituion ciphers, messages that are shorter than 100 characters, especially when spaces are removed, are relatively unsolvable to someone without a computer when encrypted with a substitution cipher. This can be a lot of fun for friends who want to communicate without being discovered by their peers.
+Despite the fact that modern cryptography has shifted far beyond substituion ciphers, messages that are shorter than 100 characters, especially when spaces are removed, are relatively unsolvable to someone without a computer when encrypted with certain substitution ciphers. This can be a lot of fun for friends who want to communicate without being discovered by their peers.
 
-Substition ciphers are quite easy to create in programs like python and R. We will now explore one such cipher, the "Affine Cipher", and how it can be created in R.
+Substition ciphers are quite easy to create. They employ various principles of number theory that are easily employed by computers. We will now explore one such cipher, the "Affine Cipher", and how it can be created in R.
 
 ## The theory.
 
@@ -34,15 +32,11 @@ With this funciton, the message "helloworld" maps to "fyxxeoelxn". Want to make 
 
 ## The code.
 
-First step is to split your message into a vector of characters. R does this nicely with the 'strsplit' function:
+Our first step is to split our message into a vector of characters. R does this nicely with the 'strsplit' function. We must also initialize our key values, as well as a vector for our cipher text.
 
 ```
 message <- strsplit("helloworld", "")[[1]]
-```
 
-We must also initialize our key values, as well as a vector for our cipher text. I prefer to do this as follows:
-
-```
 a <- 11
 b <- 6
 cipher <- vector()
@@ -59,11 +53,12 @@ for (i in 1:length(message)) {
 }
 ```
 
-Notice 2 things:
-*1. The 'match' function in R will return the index where the character 'message[i]' matches a character in the vector 'LETTERS'.*
-*2. We add the '- 1' in our declaration of 'value' because R indexes starting at 1, and remember that our cipher implies that we index starting at 0.*
+*Notice 3 things:*
+1. We used the function 'str_to_upper', a function found in the _tidyverse_ library.
+2. The 'match' function in R will return the index where the character 'message[i]' matches a character in the vector 'LETTERS'.
+3. We add the '- 1' in our declaration of 'value' because R indices start at 1, and remember that our cipher implies that we index starting at 0.
 
-We now have a numeric value for our letter. We can then insert that number into our Affine function. This is quite easy. Note that I continue our previous for loop:
+We now have a numeric value for our letter. We can then insert that number into our Affine function. This is quite easy. Note that I extend our previous for loop:
 
 ```
 for (i in 1:length(message)) {
@@ -75,7 +70,7 @@ for (i in 1:length(message)) {
 }
 ```
 
-Notice that in the 'cipher_value' declaration, we include '+ 1' in order to align with R indexing.
+*Notice that in the 'cipher_value' declaration, we include '+ 1' in order to align with R indexing.*
 
 We now have a vector, 'cipher', that contains each mapped-to letter from our original message using our Affine function. We can piece it back together using the 'paste' function:
 
@@ -105,8 +100,8 @@ for (i in 1:modulus) {
 
 The rest is up to you!
 
-## The conclusion.
+## In closing.
 
 Substition ciphers, though relatively easy to break today, are quite fun to create and use. The math behind the scenes is interesting and the code is an enjoyable puzzle. I created this Affine Cipher in R, but it can be easily created in Python using NumPy, or any other language for that matter!
 
-In closing, check out [this Affine Cipher application](https://adamiser.shinyapps.io/affinecipher/) I made in R Shiny.
+**Now, check out [this Affine Cipher application](https://adamiser.shinyapps.io/affinecipher/) I made in R Shiny.** Use it with your friends!
