@@ -4,7 +4,7 @@ title:  "Scraping Population Data"
 date:   2022-10-18
 author: Adam Simpson
 description: Gathering population data using a public API.
-image: https://raw.githubusercontent.com/adamiser/stat386-projects/main/assets/images/Lock.jpeg
+image: https://raw.githubusercontent.com/adamiser/stat386-projects/main/assets/images/un.jpg
 ---
 
 I'm sure you have heard about how "adults don't have as many kids as they used to". You've heard about countries who experience "zero population growth", whose population will decline by 20% over the next 100 years. And your grandparents have probably confronted you before, saying something like, "back in my day, a family with 6 kids was small. Now you have 1 kid and you're done!"
