@@ -4,7 +4,7 @@ title:  "Exploring Population Growth in Highly-Populated Nations"
 date:   2022-12-05
 author: Adam Simpson
 description: A final story detailing the relationships between fertility rate and life expectancy in some of the world's most populous and high-growth nations.
-image: https://raw.githubusercontent.com/adamiser/stat386-projects/main/assets/images/worlddata.jpeg
+image: https://raw.githubusercontent.com/adamiser/stat386-projects/main/assets/images/population.jpeg
 ---
 
 I gathered data from a United Nations public API. The UN provides data on a vast array of variables for all of its members. I read this interesting article from Forbes about [world population trends](https://www.forbes.com/sites/roberthart/2022/11/14/worlds-population-reaches-8-billion-this-week-heres-what-you-need-to-know/). To briefly summarize (though I suggest you read the article), the world population has now reached 8 billion people, but researchers say that most of the growth over the next 80 years will come from a handful of countries. I thought, why not explore the data from this handful of countries and compare it to minimal-growth first-world countries such as Japan and the USA? 
