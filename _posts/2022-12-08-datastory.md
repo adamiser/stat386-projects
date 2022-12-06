@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Exploring Population Data from the United Nations"
-date:   2022-11-18
+title:  "Exploring Population Growth in Highly-Populated Nations"
+date:   2022-12-08
 author: Adam Simpson
-description: Exploring population data (such as life expectancy and fertility rate) obtained from a United Nations API in many fast and slow-growing countries.
+description: A final story detailing the relationships between fertility rate and life expectancy in some of the world's most populous and high-growth nations.
 image: https://raw.githubusercontent.com/adamiser/stat386-projects/main/assets/images/worlddata.jpeg
 ---
 
@@ -11,11 +11,7 @@ I gathered data from a United Nations public API. The UN provides data on a vast
 
 I created all of my plots using the *matplotlib* and *pandas* packages in Python. Remember to check out my code in my [Github repo](https://github.com/adamiser/WebScraping) to see how all of these plots and tables were created, and check out my [scraping population data article](https://adamiser.github.io/stat386-projects/2022/10/18/webScraping.html) to see how I used the API to gather our data.
 
-Now, we begin exploring.
-
-This first graph models the variable *fertility rate* over time.
-
-![Fertility Rate over Time](https://raw.githubusercontent.com/adamiser/stat386-projects/main/assets/images/fert_rate_over_time.png)
+![Data Story](https://raw.githubusercontent.com/adamiser/stat386-projects/main/assets/images/datastory.png)
 
 It seems to me that every country, whether it be labeled as "fast" or "slow" growing, has a declining fertility rate. The first world countries China, Japan and the USA have always had low fertility rates, but even they have declined over the past 40 years. Countries like Ethiopia, India and Pakistan, who all had fertility rates over 6.0 in 1980, have all dropped by over 1.0, with Ethiopia dropping from 7.5 to 4.5. And yet these countries are still contribuing largely to the world's population growth. 
 
