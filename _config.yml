@@ -20,8 +20,7 @@
 
 title: Simple Insights # Make a title for your blog
 email: adamiser810@gmail.com # Add your email 
-description: Designed to make topics in statistics, data science, and mathematics seem "simple".
- Change the description so that it describes your blog
+description: A blog designed to make topics in statistics, data science, and mathematics seem "simple".
 baseurl: "/stat386-projects" # keep this the same or change it to the name of the repository 
 url: "https://adamiser.github.io" #  change this to "https://<your-github-username>.github.io"
 image: "assets/images/graphs.jpeg"
@@ -31,11 +30,11 @@ copyright: ADS # Your initials or what you want the copyright to be.  Leave empt
 # Social media users names.  Leave fields blank that you don't want displayed
 twitter_username: 
 github_username:  adamiser
-linkedin_username: 
+linkedin_username: Adam Simpson
 dribbble_username: 
 facebook_username: Adam Simpson
 flickr_username:
-instagram_username: 
+instagram_username: adamiser
 pinterest_username:
 youtube_username: 
 googleplus_username: 
