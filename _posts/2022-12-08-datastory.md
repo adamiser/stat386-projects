@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Exploring Population Growth in Highly-Populated Nations"
-date:   2022-12-08
+date:   2022-12-05
 author: Adam Simpson
 description: A final story detailing the relationships between fertility rate and life expectancy in some of the world's most populous and high-growth nations.
 image: https://raw.githubusercontent.com/adamiser/stat386-projects/main/assets/images/worlddata.jpeg
