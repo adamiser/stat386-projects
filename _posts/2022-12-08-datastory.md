@@ -7,37 +7,19 @@ description: A final story detailing the relationships between fertility rate an
 image: https://raw.githubusercontent.com/adamiser/stat386-projects/main/assets/images/population.jpeg
 ---
 
-I gathered data from a United Nations public API. The UN provides data on a vast array of variables for all of its members. I read this interesting article from Forbes about [world population trends](https://www.forbes.com/sites/roberthart/2022/11/14/worlds-population-reaches-8-billion-this-week-heres-what-you-need-to-know/). To briefly summarize (though I suggest you read the article), the world population has now reached 8 billion people, but researchers say that most of the growth over the next 80 years will come from a handful of countries. I thought, why not explore the data from this handful of countries and compare it to minimal-growth first-world countries such as Japan and the USA? 
+### Motivation and Project Summary
 
-I created all of my plots using the *matplotlib* and *pandas* packages in Python. Remember to check out my code in my [Github repo](https://github.com/adamiser/WebScraping) to see how all of these plots and tables were created, and check out my [scraping population data article](https://adamiser.github.io/stat386-projects/2022/10/18/webScraping.html) to see how I used the API to gather our data.
+Did you know that the world has reached 8 billion people?! Shocking! It's hard to imagine that many distinct human beings living on this planet. How did we reach this many people? Are we still growing? Where will we be in 20 years? 50 years? According to an article from Forbes about [world population trends](https://www.forbes.com/sites/roberthart/2022/11/14/worlds-population-reaches-8-billion-this-week-heres-what-you-need-to-know/), it seems that growth isn't stopping anytime soon. Despite what we hear about many first world nations reaching "zero population growth", the global population won't be declining anytime soon.
+
+These thoughts inspired me to examine these trends firsthand. I gathered data from a United Nations public API. The UN provides data on a vast array of variables for all of its members, including fertility rate and life expectancy. The API contained plenty of documentation on how to access certain variables for whichever nation you desired. There were over 80 variables. For my analysis, I chose 5 to examine from 9 nations, though in the future I would love to look at more. I summarize my data collection [here](https://adamiser.github.io/stat386-projects/2022/10/18/webScraping.html), and my exploration of the data can be found [here](https://adamiser.github.io/stat386-projects/2022/11/18/eda.html). Of the variables I chose, fertility rate and life expectancy were the most interesting and had the greatest link to population growth in nations mentioned by the Forbes article. I found that I could summarize most of my findings in one graphic:
 
 ![Data Story](https://raw.githubusercontent.com/adamiser/stat386-projects/main/assets/images/datastory.png)
 
-It seems to me that every country, whether it be labeled as "fast" or "slow" growing, has a declining fertility rate. The first world countries China, Japan and the USA have always had low fertility rates, but even they have declined over the past 40 years. Countries like Ethiopia, India and Pakistan, who all had fertility rates over 6.0 in 1980, have all dropped by over 1.0, with Ethiopia dropping from 7.5 to 4.5. And yet these countries are still contribuing largely to the world's population growth. 
+### The Story
 
-How can nations with such rapidly declining fertility rates still grow so much? These next two plots may hold some answers.
+I believe the message of this plot is clear: the 3 nations expected to surpass the United States in population by 2100 (Nigeria, Pakistan, and the Congo), despite experiencing a decline in fertility rate, still have the life expectancy and reproduction levels to grow in astronomical levels. No nations in the history of the world have experienced a combination of high life expectancy and fertility rates quite like these nations. First-world, highly populated nations such as Japan, China, and the United States only maintain population through migration: the sub-necessary reproduction levels of these nations leave them at high risk of zero population growth and even decline. This makes way for third-world and former third-world nations to easily rise in the world population rankings. While it is clearly true that as a whole people are not having as many children, we are still having enough to keep the population growing. Combined with longer life expectancies, the Earth is truly filling up! 
 
-![Fertility Rate vs Infant Mortality Rate](https://raw.githubusercontent.com/adamiser/stat386-projects/main/assets/images/fert_rate_vs_inf_mort.png)
+### Gratitude
 
-![Fertility Rate vs Life Expectancy](https://raw.githubusercontent.com/adamiser/stat386-projects/main/assets/images/fert_rate_vs_life_exp.png)
-
-It seems that, though all nations have experienced declining fertility rates over time, they have also experienced huge jumps in life expectancy and huge drops infant mortality rate. This means that, though less babies are being born, more are surviving, and they are living much longer lives. Is this rise in life expectancy and drop in infant mortality rate enough to counteract lower fertility and birth rates, enabling populations to still grow? According to the Forbes article, yes. And according to this next plot, we may agree.
-
-![Population Density over Time](https://raw.githubusercontent.com/adamiser/stat386-projects/main/assets/images/pop_dens_over_time.png)
-
-Despite lower fertility rates, population density is skyrockting in each of these high-growth nations. While the first world nations Japan, China and the USA are not increasing, they aren't decreasing. Japan has a slight parabola, but they are still higher than they were 40 years ago. Nigeria and Pakistan - who are predicted to overtake the population of the USA in 20-50 years - have exploded when it comes to population density! It seems that lower fertility rates have not been enough to subdue rises in life expectancy and infant mortality rates.
-
-I also thought it would be neat to explore just how much these statistics have changed over these 40 years. These tables show us where the nations were at in 2020 and then by how much they have changed in the 40 years.
-
-![2020 Data](https://raw.githubusercontent.com/adamiser/stat386-projects/main/assets/images/2020_data.jpeg)
-
-![Change](https://raw.githubusercontent.com/adamiser/stat386-projects/main/assets/images/change.jpeg)
-
-It is exciting to see that all life expectancies of these nations are now over 50. That shows just how influential technological and medical advances have been on all continents of the world. When we examine how much life expectancy has changed over the past 40 years, we see that some nations have added over 10 years to the lives of their people - Ethiopia has added 22! What a fortunate time to be born.
-
-It is also interesting to note that, as demonstrated in a previous plot, life expectancy and fertility rate seem to have a strong negative correlation - as a nation gains greater life expectancy, fertility rate plummets. The first table is organized in descending order by life expectancy. That almost matches the order of fertility rate in ascending order! It seems that when people know their kids will live long lives, they don't feel a need to have so many. Every nation in our list experienced this. All saw an increase in life expectancy and a decrease in fertility rate - some more than others - over the past 40 years. I wonder what this will look like in 2050?
-
-In my next post, we will perform statistical analyses and see if we can make predicitions about populations in 2050 and beyond. In the meantime, think to yourself, how will the world be different when we reach 10 billion people? 12 billion? How many people will we have on this Earth at one time? 
-
-
+Thank you for following my data story! It has been incredibly exciting to explore population data. I look forward to further exploration and even predictive modeling based on data from the public United Nations API. Check out my code in [my GitHub repo](https://github.com/adamiser/WebScraping) to see what I did. I would love to hear from you with feedback or suggestions! 
 
